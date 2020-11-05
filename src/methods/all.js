@@ -5,10 +5,18 @@ module.exports = function(db, params, options) {
   let resp = [];
   for (var row of stmt.iterate()) {
     try {
-      resp.push({
-        ID: row.ID,
-        data: JSON.parse(row.json)
-      })
+      let data = JSON.parse(row.json)
+      try{
+        resp.push({
+          ID: row.ID,
+          data: JSON.parse(data)
+        })
+      }catch{
+        resp.push({
+          ID: row.ID,
+          data: data
+        })
+      }
     } catch (e) {}
   }
   
