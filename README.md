@@ -1,3 +1,5 @@
+# npm i https://github.com/DaliborTrampota/quick.db/tarball/master
+
 ## Quick.db
 
 **Documentation:** [quickdb.js.org](https://quickdb.js.org) <br>
